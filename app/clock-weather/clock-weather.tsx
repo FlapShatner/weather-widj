@@ -9,23 +9,7 @@ import Desc from './desc'
 import Time from './time'
 import Weekday from './weekday'
 import MoDay from './mo-day'
-
-type WeatherData = {
- DateTime: string
- EpochDateTime: number
- WeatherIcon: number
- IconPhrase: string
- HasPrecipitation: boolean
- IsDaylight: boolean
- Temperature: {
-  Value: number
-  Unit: string
-  UnitType: number
- }
- PrecipitationProbability: number
- MobileLink: string
- Link: string
-}[]
+import { WeatherData } from '@/app/page'
 
 export type SortedData = {
  hourNum: number
@@ -34,10 +18,10 @@ export type SortedData = {
  phrase: string
 }[]
 
-async function ClockWeather() {
+async function ClockWeather({ weatherData, city }: { weatherData: WeatherData; city: string }) {
  const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
- const weatherData: WeatherData = await getWeather()
- //  console.log(weatherData)
+ //  const weatherData: WeatherData = await getWeather()
+ console.log(weatherData)
  const nowHour = new Date().getHours()
  const currHour = nowHour % 12
  //  console.log(currHour)
@@ -83,7 +67,10 @@ async function ClockWeather() {
     <Time />
     <MoDay />
     <Weekday />
-    <Desc sortedData={sortedData} />
+    <Desc
+     city={city}
+     sortedData={sortedData}
+    />
     <Hands />
     <div id='small-circle'></div>
    </div>
