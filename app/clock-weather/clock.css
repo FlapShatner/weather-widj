@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+.nunito-sans-desc {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+#time {
+  font-weight: 600
+}
+
+.inset-border {
+  box-shadow: inset 0 0 0 1px #ffffff63;
+}
+
+.clock-outer {
+  width: 332px;
+  height: 332px;
+  border: 15px solid #202020;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(#505050, #000);
+}
+
+.clock {
+  width: 180px;
+  height: 180px;
+  /* border: 2px solid black; */
+  border-radius: 50%;
+  position: absolute;
+  background: radial-gradient(#505050, #000 85%, #000);
+  font-family: 'Oswald', sans-serif;
+}
+
+.icons {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  position: absolute;
+  background: radial-gradient(#505050, #000 85%, #000);
+}
+
+.temps {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  position: absolute;
+  background: radial-gradient(#505050, #000 85%, #000);
+}
+
+.clock-container {
+  left: 68%;
+  top: -85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Oswald', sans-serif;
+  background: transparent;
+  font-weight: lighter;
+
+  @media(min-width:1500px) {
+    left: 73%;
+  }
+}
+
+/* .clock-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(130deg, rgba(0, 0, 0, 0.288) 0%, rgba(0, 0, 0, .95)30%);
+} */
+
+.clock .number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+}
+
+.clock .hand {
+  --rotation: 10;
+  position: absolute;
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.61);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom;
+
+}
+
+.clock .hand.minute {
+  height: 84%;
+  width: 5px;
+  background-color: #505050;
+}
+
+#small-circle {
+  position: absolute;
+  border: 2px solid #ffffff88;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, rgb(87, 87, 87)1%, rgb(0, 0, 0) 50%);
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.clock .hand.second {
+  height: 90%;
+  width: 3px;
+  background: red;
+}
+
+.clock .hand.hour {
+  height: 50%;
+  width: 10px;
+  background-color: #505050;
+}
+
+.clock-container-2 {
+  display: flex;
+  position: absolute;
+  bottom: 44%;
+  left: 68%;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 80px;
+  height: 50px;
+  font-size: 1.3rem;
+}
+
+.clock-container-2 #date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid black;
+  width: 40px;
+  height: 50px;
+
+}
+
+.clock-container-2 #month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 50px;
+
+}
+
+.inner-num {
+  width: max-content;
+  font-size: .9rem;
+  margin-inline: auto;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+}
+
+.icn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.icn-num {
+  margin-top: 2px;
+}
+
+.temp {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.num1 {
+  transform: rotate(-30deg);
+}
+
+.number1 {
+  transform: rotate(30deg);
+}
+
+.icn1 {
+  transform: rotate(30deg);
+}
+
+.temp1 {
+  transform: rotate(30deg);
+}
+
+.num2 {
+  transform: rotate(-60deg);
+}
+
+.number2 {
+  transform: rotate(60deg);
+}
+
+.icn2 {
+  transform: rotate(60deg);
+}
+
+.temp2 {
+  transform: rotate(60deg);
+}
+
+.num3 {
+  transform: rotate(-90deg);
+}
+
+.number3 {
+  transform: rotate(90deg);
+}
+
+.icn3 {
+  transform: rotate(90deg);
+}
+
+.temp3 {
+  transform: rotate(90deg);
+}
+
+.num4 {
+  transform: rotate(-120deg);
+}
+
+
+.number4 {
+  transform: rotate(120deg);
+}
+
+.icn4 {
+  transform: rotate(120deg);
+}
+
+.temp4 {
+  transform: rotate(120deg);
+}
+
+.num5 {
+  transform: rotate(-150deg);
+}
+
+.number5 {
+  transform: rotate(150deg);
+}
+
+.icn5 {
+  transform: rotate(150deg);
+}
+
+.temp5 {
+  transform: rotate(150deg);
+}
+
+.num6 {
+  transform: rotate(-180deg);
+}
+
+.number6 {
+  transform: rotate(180deg);
+}
+
+.icn6 {
+  transform: rotate(180deg);
+}
+
+.temp6 {
+  transform: rotate(180deg);
+}
+
+.num7 {
+  transform: rotate(-210deg);
+}
+
+.number7 {
+  transform: rotate(210deg);
+}
+
+.icn7 {
+  transform: rotate(210deg);
+}
+
+.temp7 {
+  transform: rotate(210deg);
+}
+
+.num8 {
+  transform: rotate(-240deg);
+}
+
+.number8 {
+  transform: rotate(240deg);
+}
+
+.icn8 {
+  transform: rotate(240deg);
+}
+
+.temp8 {
+  transform: rotate(240deg);
+}
+
+.num9 {
+  transform: rotate(-270deg);
+}
+
+.number9 {
+  transform: rotate(270deg);
+}
+
+.icn9 {
+  transform: rotate(270deg);
+}
+
+.temp9 {
+  transform: rotate(270deg);
+}
+
+.num10 {
+  transform: rotate(-300deg);
+}
+
+.number10 {
+  transform: rotate(300deg);
+}
+
+.icn10 {
+  transform: rotate(300deg);
+}
+
+.temp10 {
+  transform: rotate(300deg);
+}
+
+.num11 {
+  transform: rotate(-330deg);
+}
+
+.number11 {
+  transform: rotate(330deg);
+}
+
+.icn11 {
+  transform: rotate(330deg);
+}
+
+.temp11 {
+  transform: rotate(330deg);
+}
